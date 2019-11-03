@@ -12,7 +12,9 @@ export const AppProvider = props => {
 	const [selector, setSelector] = useState(initialState.selector);
 	const [stylesheet, setStylesheet] = useState(initialState.stylesheet);
 	const [rules, setRules] = useState('');
+	const [rulesData, setRulesData] = useState(null);
 	const [frameDocument, setFrameDocument] = useState(null);
+
 	const { children } = props;
 	const { Provider } = AppContext;
 
@@ -28,6 +30,8 @@ export const AppProvider = props => {
 		setFrameDocument,
 		rules,
 		setRules,
+		rulesData,
+		setRulesData,
 	};
 
 	return (
